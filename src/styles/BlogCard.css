@@ -1,0 +1,150 @@
+.blog-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #e8ecf1;
+  height: fit-content;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  border-color: #3498db;
+}
+
+.blog-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  gap: 12px;
+}
+
+.blog-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0;
+  line-height: 1.4;
+  flex: 1;
+  word-wrap: break-word;
+}
+
+.blog-date {
+  font-size: 0.85rem;
+  color: #95a5a6;
+  font-weight: 500;
+  white-space: nowrap;
+  background-color: #f8f9fa;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.blog-author {
+  margin-bottom: 16px;
+}
+
+.blog-author span {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.blog-content {
+  margin-bottom: 20px;
+}
+
+.blog-content p {
+  font-size: 0.95rem;
+  color: #34495e;
+  line-height: 1.6;
+  margin: 0;
+  text-align: justify;
+}
+
+.blog-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.blog-actions .btn {
+  flex: 1;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.btn-edit {
+  background-color: #f39c12;
+  color: white;
+}
+
+.btn-edit:hover {
+  background-color: #e67e22;
+  transform: translateY(-1px);
+}
+
+.btn-delete {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: #c0392b;
+  transform: translateY(-1px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .blog-card {
+    padding: 20px;
+  }
+  
+  .blog-card-header {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+  
+  .blog-date {
+    align-self: flex-end;
+  }
+  
+  .blog-title {
+    font-size: 1.1rem;
+  }
+  
+  .blog-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .blog-actions .btn {
+    width: 100%;
+  }
+}
+
+/* Animation for new cards */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.blog-card {
+  animation: slideIn 0.3s ease-out;
+}
